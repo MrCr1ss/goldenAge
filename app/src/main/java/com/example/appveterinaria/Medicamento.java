@@ -11,6 +11,13 @@ import android.widget.TextView;
 
 public class Medicamento extends AppCompatActivity {
 
+    public Medicamento(String nombreMedicamento, String dosisMedicamento) {
+    }
+    public Medicamento() {
+        // Constructor vacío
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +37,7 @@ public class Medicamento extends AppCompatActivity {
 
         // Obtén referencias a las imágenes por sus ID
         ImageView imageButton1 = findViewById(R.id.btnAddMed);
+        ImageView imageButton2 = findViewById(R.id.btnPrintMed);
 
         // Configura un OnClickListener para cada imagen
         imageButton1.setOnClickListener(new View.OnClickListener() {
@@ -39,11 +47,36 @@ public class Medicamento extends AppCompatActivity {
                 onClickImage1();
             }
         });
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Llama al método para manejar el clic en la imagen 1
+                onClickImage2();
+            }
+        });
 
     }
     private void onClickImage1() {
         // Crea un Intent para iniciar la nueva actividad
         Intent intent = new Intent(this, AgregarMedicamento.class);
+        // Recupera los datos del Intent
+        Intent intentOrigen = getIntent();
+        String nombre = intentOrigen.getStringExtra("NOMBRE");
+        String run = intentOrigen.getStringExtra("N_FICHA");
+        //
+        Animal animal = intentOrigen.getParcelableExtra("ANIMAL_SELECCIONADO");
+
+        // Pasa los datos a través del Intent
+        intent.putExtra("NOMBRE", nombre);
+        intent.putExtra("N_FICHA", run);
+        //
+        // Pasa el objeto Animal a través del Intent
+        intent.putExtra("ANIMAL_SELECCIONADO", animal);
+        startActivity(intent);
+    }
+    private void onClickImage2() {
+        // Crea un Intent para iniciar la nueva actividad
+        Intent intent = new Intent(this, ImprimirMedicamento.class);
         // Recupera los datos del Intent
         Intent intentOrigen = getIntent();
         String nombre = intentOrigen.getStringExtra("NOMBRE");
