@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class Animal implements Parcelable {
@@ -14,8 +16,19 @@ public class Animal implements Parcelable {
     public String tAnimal;
     public String eAnimal;
 
-    public Animal() {
+    private List<Medicamento> medicamentos;
 
+    public Animal() {
+        // Inicializar la lista de medicamentos en el constructor
+        medicamentos = new ArrayList<>();
+    }
+    // Métodos para gestionar la lista de medicamentos
+    public void agregarMedicamento(Medicamento medicamento) {
+        this.medicamentos.add(medicamento);
+    }
+
+    public List<Medicamento> getMedicamentos() {
+        return medicamentos;
     }
 
     public String getnFicha() {
@@ -66,6 +79,7 @@ public class Animal implements Parcelable {
         dest.writeString(this.nAnimal);
         dest.writeString(this.tAnimal);
         dest.writeString(this.eAnimal);
+        dest.writeList(this.medicamentos);
     }
 
     public void readFromParcel(Parcel source) {
@@ -73,6 +87,8 @@ public class Animal implements Parcelable {
         this.nAnimal = source.readString();
         this.tAnimal = source.readString();
         this.eAnimal = source.readString();
+        this.medicamentos = new ArrayList<>();
+        source.readList(this.medicamentos, Medicamento.class.getClassLoader());
     }
 
     protected Animal(Parcel in) {
@@ -80,7 +96,10 @@ public class Animal implements Parcelable {
         this.nAnimal = in.readString();
         this.tAnimal = in.readString();
         this.eAnimal = in.readString();
+        this.medicamentos = new ArrayList<>();
+        in.readList(this.medicamentos, Medicamento.class.getClassLoader());
     }
+
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
         @Override
         public Animal createFromParcel(Parcel source) {
@@ -94,4 +113,6 @@ public class Animal implements Parcelable {
     };
 
 }
+
+
 

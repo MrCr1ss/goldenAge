@@ -44,6 +44,19 @@ public class Medicamento extends AppCompatActivity {
     private void onClickImage1() {
         // Crea un Intent para iniciar la nueva actividad
         Intent intent = new Intent(this, AgregarMedicamento.class);
+        // Recupera los datos del Intent
+        Intent intentOrigen = getIntent();
+        String nombre = intentOrigen.getStringExtra("NOMBRE");
+        String run = intentOrigen.getStringExtra("N_FICHA");
+        //
+        Animal animal = intentOrigen.getParcelableExtra("ANIMAL_SELECCIONADO");
+
+        // Pasa los datos a través del Intent
+        intent.putExtra("NOMBRE", nombre);
+        intent.putExtra("N_FICHA", run);
+        //
+        // Pasa el objeto Animal a través del Intent
+        intent.putExtra("ANIMAL_SELECCIONADO", animal);
         startActivity(intent);
     }
 }

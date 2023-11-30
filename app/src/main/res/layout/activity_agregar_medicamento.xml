@@ -5,27 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AgregarMedicamento">
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="-45dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp">
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/textViewPaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="-140dp"
             android:layout_marginTop="70dp"
+            android:text="@string/textPaciente"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="@string/textPaciente" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewNombre"
@@ -34,6 +33,7 @@
             android:layout_marginStart="-100dp"
             android:layout_marginTop="50dp"
             android:text="Nombre del Paciente: " />
+
         <TextView
             android:id="@+id/textViewRun"
             android:layout_width="wrap_content"
@@ -43,59 +43,93 @@
             android:text="Run del Paciente: " />
         <!-- Texto explicativo -->
         <TextView
-            android:id="@+id/textViewExplicacion"
+            android:id="@+id/textViewtextNomMed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingrese el texto:"
+            android:layout_marginStart="-110dp"
             android:layout_marginTop="50dp"
-            android:layout_marginStart="-130dp"/>
+            android:text="@string/textNomMed" />
 
         <!-- Cuadro de texto -->
         <EditText
-            android:id="@+id/editTextTexto"
+            android:id="@+id/editTextNombreMed"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/textViewExplicacion"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="-80dp"
-            android:hint="Escribe aquí"/>
-
-        <TextView
-            android:id="@+id/textViewExplicacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingrese el texto:"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="-130dp"/>
-        <!-- Cuadro de texto -->
-        <EditText
-            android:id="@+id/editTextTexto"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewExplicacion"
             android:layout_marginTop="8dp"
-            android:layout_marginStart="-80dp"
-            android:hint="Escribe aquí"/>
+            android:hint="Escribe aquí" />
+        <GridLayout
+            android:layout_width="400dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:columnCount="4"
+            android:rowCount="2">
 
+            <!-- Cuadro de texto -->
+            <TextView
+                android:id="@+id/textViewExplicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="@string/textDosis" />
+
+            <EditText
+                android:id="@+id/editTextDosis"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_below="@id/textViewExplicacion"
+                android:hint="Escribe aquí"
+                android:inputType="number"/>
+            <Spinner
+                android:id="@+id/tipDosi"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:entries="@array/tipoDosi"
+                android:spinnerMode="dialog" />
+
+            <CheckBox
+                android:id="@+id/checkBoxNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:text="@string/textNormal" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAlta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:text="@string/textAlta" />
+
+
+        </GridLayout>
         <TextView
             android:id="@+id/textViewPaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="-70dp"
             android:layout_marginTop="20dp"
+            android:text="@string/textFormat"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="@string/textFormat" />
-
+            android:textStyle="bold" />
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:columnCount="6"
-            android:rowCount="6"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:rowCount="4">
 
             <!--Boton1-->
             <ImageButton
@@ -108,8 +142,9 @@
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add" />
+
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxPas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -127,8 +162,9 @@
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add" />
+
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxCap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
@@ -146,8 +182,9 @@
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add" />
+
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxJar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="2"
@@ -165,8 +202,9 @@
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add" />
+
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxGot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
@@ -184,8 +222,9 @@
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add" />
+
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxCrem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -203,8 +242,9 @@
                 android:background="@null"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add" />
+
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxInha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="2"

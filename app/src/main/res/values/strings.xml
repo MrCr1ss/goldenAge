@@ -54,6 +54,11 @@
     <string name="textListMedi">Listar Medicamento</string>
     <string name="textDelMedi">Eliminar Medicamento</string>
     <!--Medicamento-->
+
+    <string name="textDosis">Dosis Medicamento</string>
+    <string name="textAlta">Alta</string>
+    <string name="textNormal">Normal</string>
+    <string name="textNomMed">Nombre medicamento</string>
     <string name="textFormat">Formato de medicamento</string>
     <string name="textPast">Pastilla</string>
     <string name="textCap">Capsula</string>

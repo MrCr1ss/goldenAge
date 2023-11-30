@@ -7,4 +7,10 @@
         <item>Conejo</item>
         <item>Hámster</item>
     </string-array>
+    <string-array name="tipoDosi">
+        <item>Dosificación</item>
+        <item>Mg</item>
+        <item>Ml</item>
+        <item>G</item>
+    </string-array>
 </resources>
