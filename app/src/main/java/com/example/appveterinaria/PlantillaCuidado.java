@@ -52,6 +52,8 @@ public class PlantillaCuidado extends AppCompatActivity {
         // Pasa los datos a través del Intent
         intent.putExtra("NOMBRE", nombre);
         intent.putExtra("N_FICHA", run);
+        Animal animal = intentOrigen.getParcelableExtra("ANIMAL_SELECCIONADO");
+        intent.putExtra("ANIMAL_SELECCIONADO", animal);
         startActivity(intent);
     }
 

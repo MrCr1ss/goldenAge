@@ -76,7 +76,7 @@ public class Medicamento extends AppCompatActivity {
     }
     private void onClickImage2() {
         // Crea un Intent para iniciar la nueva actividad
-        Intent intent = new Intent(this, ImprimirMedicamento.class);
+        Intent intent = new Intent(Medicamento.this, ImprimirMedicamento.class);
         // Recupera los datos del Intent
         Intent intentOrigen = getIntent();
         String nombre = intentOrigen.getStringExtra("NOMBRE");

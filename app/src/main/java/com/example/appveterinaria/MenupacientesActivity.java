@@ -41,6 +41,9 @@ public class MenupacientesActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenupacientesActivity.this, PlantillaCuidado.class);
                 intent.putExtra("NOMBRE", nombre);
                 intent.putExtra("N_FICHA", run);
+                Intent intentOrigen = getIntent();
+                Animal animal = intentOrigen.getParcelableExtra("ANIMAL_SELECCIONADO");
+                intent.putExtra("ANIMAL_SELECCIONADO", animal);
                 startActivity(intent);
             }
         });

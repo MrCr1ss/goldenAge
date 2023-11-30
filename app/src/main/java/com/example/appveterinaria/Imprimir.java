@@ -65,6 +65,9 @@ public class Imprimir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(Imprimir.this, MainActivity.class);
                 i.putParcelableArrayListExtra("animales", animales);
+                Intent intentOrigen = getIntent();
+                Animal animal = intentOrigen.getParcelableExtra("ANIMAL_SELECCIONADO");
+                i.putExtra("ANIMAL_SELECCIONADO", animal);
                 startActivity(i);
                 finish();
             }

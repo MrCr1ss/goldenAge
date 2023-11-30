@@ -13,6 +13,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class AgregarMedicamento extends AppCompatActivity {
 
@@ -21,7 +24,9 @@ public class AgregarMedicamento extends AppCompatActivity {
     private Button btnAgregar;
     private CheckBox checkBoxAlta,checkBoxNormalm,checkBoxPas,checkBoxCap,checkBoxJar,checkBoxCrem,checkBoxGot,checkBoxInha;
 
-    @SuppressLint("MissingInflatedId")
+    private ArrayList <Animal> animales;
+    private ArrayList <Medicamento> medicamentos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +43,7 @@ public class AgregarMedicamento extends AppCompatActivity {
         checkBoxCrem = (CheckBox) findViewById(R.id.checkBoxCrem);
         checkBoxGot = (CheckBox) findViewById(R.id.checkBoxGot);
         checkBoxInha = (CheckBox) findViewById(R.id.checkBoxInha);
-        btnAgregar = (Button) findViewById(R.id.btnAdd2);
-
+        btnAgregar = (Button) findViewById(R.id.btnAdd);
 
         // Recuperar datos del Intent
         Intent intent = getIntent();
@@ -54,50 +58,36 @@ public class AgregarMedicamento extends AppCompatActivity {
         // Mostrar el Run en un TextView
         TextView textViewRun = findViewById(R.id.textViewRun);
         textViewRun.setText("Run del Paciente: " + run);
+        Intent i=getIntent();
+        animales=i.getParcelableArrayListExtra("animales");
 
-        btnAgregar.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                // Lógica para agregar medicamento al animal
-                agregarMedicamentoAlAnimal(animal);
-            }
-        });
+        agregarMedicamentoAlAnimal(animal);
     }
     private void agregarMedicamentoAlAnimal(Animal animal) {
-        if (animal != null) {
-            // Obtener datos del formulario o de donde sea necesario
-            String nombreMedicamento = editTextNombreMed.getText().toString();
-            String dosisMedicamento = editTextDosis.getText().toString();
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (animal != null) {
+                    // Obtener datos del formulario o de donde sea necesario
+                    String nombreMedicamento = editTextNombreMed.getText().toString();
+                    String dosisMedicamento = editTextDosis.getText().toString();
 
 
-            // Crear un nuevo medicamento
-            Medicamento nuevoMedicamento = new Medicamento(nombreMedicamento, dosisMedicamento);
+                    // Crear un nuevo medicamento
+                    Medicamento nuevoMedicamento = new Medicamento(nombreMedicamento, dosisMedicamento);
 
-            // Agregar el medicamento a la lista de medicamentos del animal
-            animal.agregarMedicamento(nuevoMedicamento);
-        } else {
-            Toast.makeText(this, "Animal es nulo", Toast.LENGTH_SHORT).show();
-        }
-        // Crea un Intent para iniciar la nueva actividad
-        Intent intent = new Intent(this, ImprimirMedicamento.class);
-        // Recupera los datos del Intent
-        Intent intentOrigen = getIntent();
-        if (intent != null) {
-            String nombre = intentOrigen.getStringExtra("NOMBRE");
-            String run = intentOrigen.getStringExtra("N_FICHA");
+                    // Agregar el medicamento a la lista de medicamentos del animal
+                    animal.agregarMedicamento(nuevoMedicamento);
+                    Intent i = new Intent(AgregarMedicamento.this, ImprimirMedicamento.class);
+                    i.putParcelableArrayListExtra("animales", animales);
+                    Toast.makeText(AgregarMedicamento.this, "Nuevo paciente Medicamento", Toast.LENGTH_LONG).show();
+                    startActivity(i);
+                    finish();
+                } else {
+                    Toast.makeText(AgregarMedicamento.this, "Error Medicamento no agregado", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
-            // Pasa los datos a través del Intent
-            intent.putExtra("NOMBRE", nombre);
-            intent.putExtra("N_FICHA", run);
-        } else {
-            Toast.makeText(this, "Intent es nulo", Toast.LENGTH_SHORT).show();
-        }
-        //
-        // Pasa el objeto Animal a través del Intent
-        intent.putExtra("ANIMAL_SELECCIONADO", animal);
-        startActivity(intent);
-
-    };
-
+    }
 }

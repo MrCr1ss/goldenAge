@@ -18,13 +18,21 @@ public class Animal implements Parcelable {
 
     private List<Medicamento> medicamentos;
 
+
     public Animal() {
         // Inicializar la lista de medicamentos en el constructor
         medicamentos = new ArrayList<>();
     }
     // Métodos para gestionar la lista de medicamentos
+    //public void agregarMedicamento(Medicamento medicamento) {
+        //this.medicamentos.add(medicamento);
+    //}
+
     public void agregarMedicamento(Medicamento medicamento) {
-        this.medicamentos.add(medicamento);
+        if (medicamentos == null) {
+            medicamentos = new ArrayList<>();
+        }
+        medicamentos.add(medicamento);
     }
 
     public List<Medicamento> getMedicamentos() {
