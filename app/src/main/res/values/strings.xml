@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">AppVeterinaria</string>
+    <string name="mensaje">Clínica Healthy Pets</string>
+    <string name="nombre">Nombre</string>
+    <string name="ficha">N°Ficha</string>
+    <string name="menu">Menú Pacientes</string>
+    <string name="edad">Edad (años)</string>
+    <string name="lista">Lista de Pacientes</string>
+    <string name="irmenu">Ir al Menú</string>
+    <string name="agregar">Agregar</string>
+    <string name="buscar">Buscar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="eliminar2">Eliminar Ficha</string>
+    <string name="editar">Editar Ficha</string>
+    <string name="editar2">Editar</string>
+    <string name="tipoAn">Tipo de Animal</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="agregarf">Agregar Ficha</string>
+    <string name="bienvenido">Bienvenid@</string>
+    <string name="inicio">Inicio</string>
+    <string name="crearUsuario">Registrar Usuario</string>
+    <string name="salir">Salir</string>
+    <string name="menuUsuario">Menú Usuario</string>
+
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="guardar">Guardar</string>
+    <string name="registro">Registro de Usuario</string>
+    <string name="fecharegistro">Fecha de registro</string>
+    <string name="areaTrabajo">Área de trabajo</string>
+    <string name="cerrar">Cerrar sesión</string>
+    <string name="volverInicio">Volver a Inicio</string>
+
+    <!--Actual-->
+    <string name="textPaciente">Paciente</string>
+    <!--MenúOpciones-->
+    <string name="textFicha">Ver Ficha</string>
+    <string name="textCui">Ver Cuidados</string>
+    <string name="textComCui">Completar Cuidados</string>
+    <string name="textRecor">Ver Recordatorios</string>
+    <string name="textEva">Ver Evaluación</string>
+    <string name="textMRec">Menú recordatodio</string>
+    <!--MenúMedicamento,Citas,etc-->
+    <string name="textMedicamentos">Medicamentos</string>
+    <string name="textCitaMed">Citas médicas</string>
+    <string name="textAlimen">Alimentación</string>
+    <string name="textRutinEj">Rutina de ejercicios</string>
+    <!--MenúMedicamento-->
+    <string name="textAddMedi">Agregar Medicamento</string>
+    <string name="textEdiMedi">Editar Medicamento</string>
+    <string name="textListMedi">Listar Medicamento</string>
+    <string name="textDelMedi">Eliminar Medicamento</string>
+    <!--Medicamento-->
+    <string name="textFormat">Formato de medicamento</string>
+    <string name="textPast">Pastilla</string>
+    <string name="textCap">Capsula</string>
+    <string name="textJara">Jarabe</string>
+    <string name="textCre">Crema</string>
+    <string name="textGota">Gotas</string>
+    <string name="textInha">Inhalador</string>
+</resources>
