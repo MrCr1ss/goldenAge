@@ -12,7 +12,7 @@
             android:icon="@drawable/icon_uno"/>
         <item
             android:id="@+id/MenuVet"
-            android:title="Ir al menú Veterinaria"
+            android:title="Ir al menú Paciente"
             android:icon="@drawable/icon_dos"/>
         <item
             android:id="@+id/Salir"
