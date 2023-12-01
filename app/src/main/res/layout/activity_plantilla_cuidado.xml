@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="-100dp"
             android:layout_marginTop="50dp"
+            android:textSize="18dp"
             android:text="Nombre del Paciente: " />
 
         <TextView
@@ -40,11 +41,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="-112dp"
             android:layout_marginTop="10dp"
+            android:textSize="18dp"
             android:text="Run del Paciente: " />
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="46dp"
+            android:layout_marginStart="20dp"
             android:columnCount="2"
             android:orientation="horizontal"
             android:rowCount="2">
@@ -63,11 +66,12 @@
                     android:clickable="true"
                     android:onClick="onClickButtonMed"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ref" />
+                    android:src="@drawable/medicamento" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textSize="18dp"
                     android:text="@string/textMedicamentos" />
             </LinearLayout>
             <LinearLayout
@@ -85,12 +89,13 @@
                     android:clickable="true"
                     android:onClick="onClickButton1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ref" />
+                    android:src="@drawable/medico" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Texto 1" />
+                    android:textSize="18dp"
+                    android:text="Citas médicas" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -107,12 +112,14 @@
                     android:clickable="true"
                     android:onClick="onClickButton1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ref" />
+                    android:src="@drawable/comer" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Texto 1" />
+                    android:textSize="18dp"
+                    android:text="Alimentos" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -129,12 +136,13 @@
                     android:clickable="true"
                     android:onClick="onClickButton1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ref" />
+                    android:src="@drawable/andador" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Texto 1" />
+                    android:textSize="18dp"
+                    android:text="Rutina de Ejercicios" />
             </LinearLayout>
         </GridLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>

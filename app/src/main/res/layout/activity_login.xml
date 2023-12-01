@@ -15,14 +15,14 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/vet"/>
+            android:src="@drawable/usuario"/>
         <TextView
             android:id="@+id/ingreso"
             android:layout_width="wrap_content"
             android:gravity="center"
             android:layout_height="wrap_content"
             android:text="Ingresar Usuario"
-            android:textColor="#38197a"
+            android:textColor="@color/purple_700"
             android:textSize="30sp"/>
         <TextView
             android:id="@+id/textView3"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="Correo"
-            android:textColor="#38197a"
+            android:textColor="@color/purple_500"
             android:textSize="30sp"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Contraseña"
-            android:textColor="#38197a"
+            android:textColor="@color/purple_500"
             android:textSize="30sp"/>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
