@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".AgregarMedicamento">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -119,7 +120,6 @@
             android:layout_width="300dp"
             android:layout_height="160dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
             android:columnCount="6"
             android:orientation="horizontal"
             android:rowCount="4">
@@ -133,7 +133,7 @@
                 android:layout_column="0"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/pastillas" />
 
             <CheckBox
                 android:id="@+id/checkBoxPas"
@@ -153,7 +153,7 @@
                 android:layout_column="0"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/capsulas" />
 
             <CheckBox
                 android:id="@+id/checkBoxCap"
@@ -173,7 +173,7 @@
                 android:layout_column="0"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/jarabe" />
 
             <ImageView
                 android:id="@+id/img1"
@@ -183,7 +183,7 @@
                 android:layout_column="0"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/add" />
+                app:srcCompat="@drawable/pastillas" />
 
             <CheckBox
                 android:id="@+id/checkBoxJar"
@@ -200,10 +200,11 @@
                 android:layout_width="47dp"
                 android:layout_height="54dp"
                 android:layout_row="1"
+                android:layout_marginLeft="20dp"
                 android:layout_column="3"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/gotas" />
 
             <CheckBox
                 android:id="@+id/checkBoxGot"
@@ -220,11 +221,12 @@
                 android:id="@+id/img4"
                 android:layout_width="47dp"
                 android:layout_height="54dp"
+                android:layout_marginLeft="20dp"
                 android:layout_row="0"
                 android:layout_column="3"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/crema" />
 
             <CheckBox
                 android:id="@+id/checkBoxCrem"
@@ -240,9 +242,10 @@
                 android:layout_height="54dp"
                 android:layout_row="2"
                 android:layout_column="3"
+                android:layout_marginLeft="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/inhalador" />
 
             <CheckBox
                 android:id="@+id/checkBoxInha"
