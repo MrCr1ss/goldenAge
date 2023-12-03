@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="15dp"
+        tools:ignore="MissingConstraints">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -43,7 +44,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:src="@drawable/doctora"
+            android:src="@drawable/usuario"
             android:layout_marginTop="20dp"/>
 
 

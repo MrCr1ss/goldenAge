@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,8 +23,8 @@ public class AgregarMedicamento extends AppCompatActivity {
     private EditText editTextNombreMed,editTextDosis;
     private Spinner tipDosi;
     private Button btnAgregar;
-    private CheckBox checkBoxAlta,checkBoxNormalm,checkBoxPas,checkBoxCap,checkBoxJar,checkBoxCrem,checkBoxGot,checkBoxInha;
-
+    private CheckBox checkBoxPas,checkBoxCap,checkBoxJar,checkBoxCrem,checkBoxGot,checkBoxInha;
+    private RadioButton radioNormal, radioAlta;
     private ArrayList <Animal> animales;
     private ArrayList <Medicamento> medicamentos;
 
@@ -35,8 +36,8 @@ public class AgregarMedicamento extends AppCompatActivity {
         editTextNombreMed = (EditText) findViewById(R.id.editTextNombreMed);
         editTextDosis = (EditText) findViewById(R.id.editTextDosis);
         tipDosi = findViewById(R.id.tipDosi);
-        checkBoxAlta = (CheckBox) findViewById(R.id.checkBoxAlta);
-        checkBoxNormalm = (CheckBox) findViewById(R.id.checkBoxNormal);
+        radioNormal = (RadioButton) findViewById(R.id.radioNormal);
+        radioAlta = (RadioButton) findViewById(R.id.radioAlta);
         checkBoxPas = (CheckBox) findViewById(R.id.checkBoxPas);
         checkBoxCap = (CheckBox) findViewById(R.id.checkBoxCap);
         checkBoxJar = (CheckBox) findViewById(R.id.checkBoxJar);

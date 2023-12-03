@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/lista"
+            android:textColor="@color/purple_500"
             android:textSize="30sp"
             android:gravity="center"/>
 
@@ -28,7 +29,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:src="@drawable/paw_cat"/>
+            android:src="@drawable/copia"/>
 
         <ListView
             android:id="@+id/lAnimales"
@@ -43,17 +44,10 @@
             android:id="@+id/btnMenu2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="30dp"
             android:text="@string/irmenu"/>
 
-        <TextView
-            android:id="@+id/impAnimal"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="20dp"
-            android:hint="Esperando datos.."
-            android:textSize="20sp"
-            android:layout_marginTop="30dp"/>
+
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

@@ -11,52 +11,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="-45dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
 
         <TextView
             android:id="@+id/textViewNombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-100dp"
-            android:layout_marginTop="50dp"
             android:text="Nombre del Paciente: " />
 
         <TextView
             android:id="@+id/textViewRun"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-112dp"
             android:layout_marginTop="10dp"
             android:text="Run del Paciente: " />
         <!-- Texto explicativo -->
         <TextView
             android:id="@+id/textViewtextNomMed"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-110dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:text="@string/textNomMed" />
 
         <!-- Cuadro de texto -->
         <EditText
             android:id="@+id/editTextNombreMed"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@id/textViewExplicacion"
-            android:layout_marginStart="-80dp"
             android:layout_marginTop="8dp"
             android:hint="Escribe aquí" />
+
         <GridLayout
-            android:layout_width="360dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:columnCount="4"
             android:rowCount="2">
 
@@ -76,8 +68,9 @@
                 android:layout_row="1"
                 android:layout_column="0"
                 android:layout_below="@id/textViewExplicacion"
-                android:hint="aquí"
-                android:inputType="number"/>
+                android:hint="dosis"
+                android:inputType="number" />
+
             <Spinner
                 android:id="@+id/tipDosi"
                 android:layout_width="60dp"
@@ -86,36 +79,41 @@
                 android:entries="@array/tipoDosi"
                 android:spinnerMode="dialog" />
 
-            <CheckBox
-                android:id="@+id/checkBoxNormal"
+            <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="3"
-                android:text="@string/textNormal" />
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/checkBoxAlta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_row="1"
-                android:layout_column="2"
-                android:text="@string/textAlta" />
+                <RadioButton
+                    android:id="@+id/radioNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal" />
 
+                <RadioButton
+                    android:id="@+id/radioAlta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alta" />
+
+            </RadioGroup>
 
         </GridLayout>
+
+
         <TextView
             android:id="@+id/textViewFormato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="-70dp"
+            android:layout_marginStart="-60dp"
             android:layout_marginTop="20dp"
             android:text="@string/textFormat"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <GridLayout
             android:layout_width="300dp"
             android:layout_height="160dp"
@@ -200,8 +198,8 @@
                 android:layout_width="47dp"
                 android:layout_height="54dp"
                 android:layout_row="1"
-                android:layout_marginLeft="20dp"
                 android:layout_column="3"
+                android:layout_marginLeft="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/gotas" />
@@ -221,9 +219,9 @@
                 android:id="@+id/img4"
                 android:layout_width="47dp"
                 android:layout_height="54dp"
-                android:layout_marginLeft="20dp"
                 android:layout_row="0"
                 android:layout_column="3"
+                android:layout_marginLeft="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/crema" />
@@ -255,10 +253,12 @@
                 android:layout_column="4"
                 android:text="@string/textInha" />
         </GridLayout>
+
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="@string/agregar" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

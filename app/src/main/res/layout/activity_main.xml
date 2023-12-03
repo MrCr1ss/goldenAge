@@ -19,7 +19,7 @@
             android:gravity="top"
             android:text="@string/menu"
             android:textSize="30sp"
-            android:textColor="#38197a"/>
+            android:textColor="@color/purple_500"/>
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add" />
+                android:src="@drawable/mas" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/list"/>
+                android:src="@drawable/copia"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/edit" />
+                android:src="@drawable/lapiz" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/borrar" />
+                android:src="@drawable/basura" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,18 +107,18 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_height="80dp"
             android:gravity="center">
             <ImageButton
                 android:id="@+id/btnInicio"
-                android:layout_width="80dp"
+                android:layout_width="50dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="80dp"
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/volver" />
+                android:src="@drawable/atras" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

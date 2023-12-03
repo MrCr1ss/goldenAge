@@ -27,14 +27,14 @@
             android:layout_marginTop="15dp"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/lupa2"/>
+            android:src="@drawable/basura"/>
 
         <EditText
             android:id="@+id/buscarElim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:hint="Ingrese n°Ficha"
+            android:hint="Ingrese RUT"
             android:inputType="number"></EditText>
         <Button
             android:id="@+id/btnDelete2"

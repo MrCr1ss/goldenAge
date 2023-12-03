@@ -11,16 +11,16 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="-45dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
 
         <TextView
             android:id="@+id/textViewPaciente"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="-140dp"
             android:layout_marginTop="70dp"
             android:text="@string/textPaciente"
             android:textSize="24sp"
@@ -28,26 +28,23 @@
 
         <TextView
             android:id="@+id/textViewNombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-100dp"
             android:layout_marginTop="50dp"
             android:textSize="18dp"
             android:text="Nombre del Paciente: " />
 
         <TextView
             android:id="@+id/textViewRun"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-112dp"
             android:layout_marginTop="10dp"
             android:textSize="18dp"
             android:text="Run del Paciente: " />
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
-            android:layout_marginStart="20dp"
             android:columnCount="2"
             android:orientation="horizontal"
             android:rowCount="2">
@@ -55,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
                 android:orientation="vertical">
                 <ImageView
                     android:id="@+id/imageButtonMed"
@@ -78,6 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
                 android:orientation="vertical">
                 <ImageView
                     android:id="@+id/imageButton3"
@@ -101,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
                 android:orientation="vertical">
                 <ImageView
                     android:id="@+id/imageButton2"
@@ -125,6 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
                 android:orientation="vertical">
                 <ImageView
                     android:id="@+id/imageButton4"

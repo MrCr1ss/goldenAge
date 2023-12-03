@@ -28,13 +28,13 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/edit2"/>
+            android:src="@drawable/lapiz"/>
         <EditText
             android:id="@+id/buscar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:hint="Ingrese n°Ficha"
+            android:hint="Ingrese RUT"
             android:inputType="number"></EditText>
         <Button
             android:id="@+id/btnBuscar"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textSize="15sp"
-            android:hint="@string/ficha"/>
+            android:hint="Rut"/>
         <EditText
             android:id="@+id/nAnimal2"
             android:layout_width="match_parent"
@@ -68,8 +68,8 @@
             android:id="@+id/tipAnimal2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint="@string/tipoAn"/>
+            android:layout_marginTop="15dp"
+            android:hint="Género"/>
 
 
         <Spinner
