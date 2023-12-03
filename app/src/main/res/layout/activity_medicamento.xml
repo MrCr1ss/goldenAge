@@ -19,11 +19,10 @@
 
         <TextView
             android:id="@+id/textViewPaciente"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="-140dp"
             android:layout_marginTop="70dp"
             android:textSize="24sp"
             android:textColor="@color/purple_500"
@@ -32,18 +31,16 @@
 
         <TextView
             android:id="@+id/textViewNombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-100dp"
             android:layout_marginTop="50dp"
             android:text="Nombre del Paciente: "
             android:textSize="18dp"
             android:textColor="@color/purple_500"/>
         <TextView
             android:id="@+id/textViewRun"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-112dp"
             android:layout_marginTop="10dp"
             android:textSize="18dp"
             android:textColor="@color/purple_500"
